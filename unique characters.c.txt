@@ -1,0 +1,23 @@
+/*input: Ethernet112
+output: Ehrn2
+*/
+
+
+#include<stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    int c[128]={0};
+    for(int i=0;s[i]!='\0';i++){
+        c[s[i]]++;
+    }
+    for(int i=0;s[i]!='\0';i++){
+        if(c[s[i]]==1){
+            printf("%c",s[i]);
+            c[s[i]]=0;
+        }
+    }
+}
